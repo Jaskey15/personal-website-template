@@ -34,13 +34,13 @@ export async function POST(request: Request) {
       to: 'your.email@example.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>From:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `,
+      text: `New Contact Form Submission
+
+From: ${name}
+Email: ${email}
+
+Message:
+${message}`,
     });
 
     if (error) {
