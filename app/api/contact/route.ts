@@ -1,6 +1,18 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+// SECURITY NOTE: Rate Limiting
+// This endpoint has no rate limiting in the template for development simplicity.
+// Before deploying to production, consider adding rate limiting to prevent spam:
+// - Use Vercel's Edge Middleware rate limiting (if deploying to Vercel)
+// - Use @upstash/ratelimit with Redis for custom solutions
+// - Implement IP-based request counting
+// Recommended: 5 requests per hour per IP address
+
+// SECURITY NOTE: CORS
+// Next.js API routes use same-origin policy by default in most deployments.
+// If you need to call these APIs from different domains, configure CORS headers.
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
