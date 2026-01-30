@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCommentsBySlug, createComment } from '@/lib/db';
 
+// SECURITY NOTE: Rate Limiting
+// This endpoint has no rate limiting in the template for development simplicity.
+// Before deploying to production, consider adding rate limiting to prevent spam:
+// - Use Vercel's Edge Middleware rate limiting (if deploying to Vercel)
+// - Use @upstash/ratelimit with Redis for custom solutions
+// - Implement IP-based request counting
+// Recommended: 10 comments per hour per IP address
+
+// SECURITY NOTE: CORS
+// Next.js API routes use same-origin policy by default in most deployments.
+// If you need to call these APIs from different domains, configure CORS headers.
+
 // GET /api/comments?slug=post-slug
 export async function GET(request: NextRequest) {
   try {
