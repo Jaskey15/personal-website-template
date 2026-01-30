@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@layer theme {
+  :root {
+    /* Light mode colors - warm paper aesthetic */
+    --color-background: 35 25% 88%;
+    --color-foreground: 25 15% 20%;
+    --color-card: 38 28% 88%;
+    --color-card-foreground: 25 15% 20%;
+    --color-popover: 35 25% 92%;
+    --color-popover-foreground: 25 15% 20%;
+    --color-primary: 18 65% 52%;
+    --color-primary-foreground: 40 15% 96%;
+    --color-secondary: 38 22% 82%;
+    --color-secondary-foreground: 25 15% 20%;
+    --color-muted: 40 20% 85%;
+    --color-muted-foreground: 25 12% 42%;
+    --color-accent: 28 45% 68%;
+    --color-accent-foreground: 25 15% 20%;
+    --color-border: 38 18% 78%;
+    --color-input: 38 18% 78%;
+    --color-ring: 18 65% 52%;
+    --color-link: 15 45% 48%;
+    --radius-lg: 0.5rem;
+    --radius-md: calc(0.5rem - 2px);
+    --radius-sm: calc(0.5rem - 4px);
+  }
+
+  .dark {
+    /* Dark mode colors - warm midnight aesthetic */
+    --color-background: 25 18% 11%;
+    --color-foreground: 40 15% 88%;
+    --color-card: 28 16% 14%;
+    --color-card-foreground: 40 15% 88%;
+    --color-popover: 25 18% 11%;
+    --color-popover-foreground: 40 15% 88%;
+    --color-primary: 22 75% 58%;
+    --color-primary-foreground: 25 20% 10%;
+    --color-secondary: 30 12% 22%;
+    --color-secondary-foreground: 40 15% 88%;
+    --color-muted: 28 10% 18%;
+    --color-muted-foreground: 38 12% 65%;
+    --color-accent: 35 55% 45%;
+    --color-accent-foreground: 40 15% 95%;
+    --color-border: 28 10% 24%;
+    --color-input: 28 10% 24%;
+    --color-ring: 22 75% 58%;
+    --color-link: 20 55% 62%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--color-border));
+  }
+  html {
+    font-size: 16px; /* Explicit base font size */
+    scrollbar-gutter: stable;
+  }
+  body {
+    font-size: 0.875rem; /* 14px - compact body text for cleaner aesthetic */
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    position: relative;
+  }
+
+  /* Subtle paper texture for light mode */
+  body:not(.dark)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        hsl(25 20% 30%) 2px,
+        hsl(25 20% 30%) 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        hsl(25 20% 30%) 2px,
+        hsl(25 20% 30%) 3px
+      );
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  /* Warm atmospheric gradient for dark mode */
+  body.dark::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.4;
+    background:
+      radial-gradient(
+        ellipse 80% 50% at 50% 0%,
+        hsl(30 40% 8%),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 0% 100%,
+        hsl(20 30% 10%),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 100% 100%,
+        hsl(35 25% 9%),
+        transparent 60%
+      );
+    z-index: -1;
+  }
+
+  /* Subtle noise texture for dark mode depth */
+  body.dark::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.015;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: -1;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-subtle {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 4rem;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .animate-fade-in-subtle {
+    animation: fade-in-subtle 0.5s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.6s ease-out 0.5s forwards;
+    width: 0;
+    opacity: 0;
+  }
+
+  /* Article content styling for long-form reading */
+  .article-content {
+    font-size: 1.125rem; /* 18px - comfortable reading size */
+  }
+
+  .article-content p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .article-content blockquote {
+    font-size: 0.9375rem; /* 15px - slightly smaller for quotes */
+    line-height: 1.9;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    font-size: 1.125rem;
+    line-height: 1.9;
+  }
+
+  /* About page content styling - more compact for bio/intro */
+  .about-content {
+    font-size: 1rem; /* 16px - compact, scannable bio content */
+  }
+
+  .about-content p {
+    font-size: 1rem; /* Ensure paragraphs inherit 16px */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+}

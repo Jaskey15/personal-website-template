@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- JA Combined Monogram - Letters share space elegantly -->
+
+  <!-- Letter J -->
+  <path d="M 35 25 L 35 60 Q 35 70 25 70 Q 15 70 15 60 L 15 57 L 20 57 L 20 60 Q 20 65 25 65 Q 30 65 30 60 L 30 25 Z"
+        fill="#C96641"/>
+
+  <!-- Letter A overlapping -->
+  <path d="M 50 72 L 60 45 L 70 72 L 65 72 L 63 65 L 57 65 L 55 72 Z M 58 60 L 62 60 L 60 52 Z"
+        fill="#C96641"/>
+
+  <!-- Connecting element - subtle line that unifies both letters -->
+  <line x1="35" y1="48" x2="57" y2="48" stroke="#C96641" stroke-width="1.5" opacity="0.4"/>
+</svg>
