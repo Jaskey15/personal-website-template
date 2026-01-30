@@ -22,7 +22,7 @@ End with a call to action - invite readers to [connect with you](/contact) or ex
    - Link to your meditations and portfolio projects for context
    - Be authentic - this is your personal site!
 
-3. **Update the alt text**: In `app/about/page.tsx`, change the `alt` prop (line 40) from "Jacob Askey" to your name
+3. **Update the alt text**: In `app/about/page.tsx`, update the `alt` prop (line 40) with your name
 
 **Content structure tips:**
 
