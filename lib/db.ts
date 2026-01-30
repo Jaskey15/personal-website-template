@@ -66,13 +66,3 @@ export async function createComment(
   `;
   return rows[0] as Comment;
 }
-
-export async function deleteComment(id: number): Promise<boolean> {
-  try {
-    await sql`DELETE FROM comments WHERE id = ${id}`;
-    return true;
-  } catch (error) {
-    console.error('Delete comment error:', error);
-    return false;
-  }
-}
