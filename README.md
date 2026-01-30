@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your site.
 
 2. **Update personal information:**
    - Edit `components/header.tsx` - change "Your Name" to your name
-   - Edit `components/footer.tsx` - update social links
+   - Edit `components/footer.tsx` - social links are currently disabled (placeholders only)
    - Edit `app/layout.tsx` - update site title and description
 
 3. **Replace placeholder images:**
@@ -93,8 +93,8 @@ Create a new file in `content/portfolio/my-project.mdx`:
 ---
 title: "My Project"
 date: "2024-01-15"
-projectLink: "https://project-url.com"
-githubLink: "https://github.com/you/project"
+projectLink: "https://project-url.com"  # Note: Links are currently disabled (display only)
+githubLink: "https://github.com/you/project"  # Note: Links are currently disabled (display only)
 problem: |
   What problem did this project solve?
 solution: |
@@ -145,7 +145,7 @@ To change fonts, edit `app/layout.tsx` and update the Google Fonts imports.
    ```
 
 2. **Header** - Edit `components/header.tsx` line 54
-3. **Footer** - Edit `components/footer.tsx` lines 8-26 for social links
+3. **Footer** - Social links in `components/footer.tsx` are currently disabled (placeholders only)
 4. **About page** - Edit `content/about.md` and update images in `app/about/page.tsx`
 
 ## 🔧 Optional Features

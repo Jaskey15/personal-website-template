@@ -1,6 +1,4 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
-import Link from "next/link"
-import { MDXLink } from "@/components/mdx-link"
 
 export function Footer() {
   const socials = [
@@ -33,9 +31,9 @@ export function Footer() {
           <div className="text-muted-foreground">
             <p>
               Like this site's design?{" "}
-              <MDXLink href="https://github.com/Jaskey15/personal-website-template">
+              <span className="text-primary">
                 Fork it
-              </MDXLink>{" "}
+              </span>{" "}
               and add your own spin!
             </p>
           </div>
@@ -45,16 +43,13 @@ export function Footer() {
             {socials.map((social) => {
               const Icon = social.icon
               return (
-                <Link
+                <span
                   key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground cursor-default"
                   aria-label={social.name}
                 >
                   <Icon className="h-6 w-6" />
-                </Link>
+                </span>
               )
             })}
           </div>
