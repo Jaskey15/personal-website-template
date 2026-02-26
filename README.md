@@ -2,7 +2,7 @@
 
 A modern, clean personal website template built with Next.js 16, TypeScript, and Tailwind CSS. Features an interactive landing page, MDX-powered blog and portfolio, dark/light themes, and optional comment system and contact form.
 
-**[Live Demo](https://jacobaskey.com)** | **[Documentation](.claude/README.md)**
+**[Live Demo](https://jacobaskey.com)** | **[Documentation](docs/)**
 
 ## ✨ Features
 
@@ -209,14 +209,13 @@ This is a standard Next.js app and can be deployed to:
 
 ## 📖 Documentation
 
-Comprehensive documentation is available in the [.claude](.claude/) folder:
+Comprehensive documentation is available in the [docs/](docs/) folder:
 
-- [Documentation Index](.claude/README.md) - Start here
-- [Project Overview](.claude/project-overview.md) - Architecture and tech decisions
-- [Styling Guide](.claude/styling-guide.md) - Tailwind patterns and conventions
-- [Content Workflow](.claude/content-workflow.md) - Adding and managing content
-- [Components Documentation](components/README.md) - Component library
-- [Content System](content/README.md) - MDX internals
+- [Architecture](docs/architecture.md) - Architecture and tech decisions
+- [Styling Guide](docs/styling.md) - Tailwind patterns and conventions
+- [Content Workflow](docs/content-workflow.md) - Adding and managing content
+- [Components](docs/components.md) - Component library
+- [Content System](docs/content-system.md) - MDX internals
 
 ## 🤝 Contributing
 
@@ -238,6 +237,6 @@ Built with love using amazing open-source tools. Special thanks to:
 
 ---
 
-**Questions?** Check the [documentation](.claude/README.md) or [open an issue](https://github.com/Jaskey15/personal-website-template/issues).
+**Questions?** Check the [documentation](docs/) or [open an issue](https://github.com/Jaskey15/personal-website-template/issues).
 
 **Like this template?** Give it a ⭐ on GitHub!

@@ -492,7 +492,7 @@ export default async function MeditationPost({
 **Comment System Integration:**
 - Meditation posts include threaded comment discussions
 - Comments stored in Neon PostgreSQL database
-- See [project-overview.md](../.claude/project-overview.md#comment-system) for architecture details
+- See [architecture.md](architecture.md#comment-system) for architecture details
 
 ## Extending the Content System
 

@@ -3,10 +3,10 @@
 High-level architecture, technology decisions, and system design for the personal website.
 
 **Related Documentation:**
-- [styling-guide.md](styling-guide.md) - Tailwind patterns, theme colors, animations, typography
+- [styling.md](styling.md) - Tailwind patterns, theme colors, animations, typography
 - [content-workflow.md](content-workflow.md) - Adding content, best practices, troubleshooting
-- [../components/README.md](../components/README.md) - Component patterns and usage
-- [../content/README.md](../content/README.md) - Content system, frontmatter schemas, MDX utilities
+- [components.md](components.md) - Component patterns and usage
+- [content-system.md](content-system.md) - Content system, frontmatter schemas, MDX utilities
 
 ## Vision
 

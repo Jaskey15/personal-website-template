@@ -133,7 +133,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 
 ### PageContainer Component
 
-**Unified page layout wrapper:** [page-container.tsx](page-container.tsx)
+**Unified page layout wrapper:** [page-container.tsx](../components/page-container.tsx)
 
 ```tsx
 import { PageContainer } from '@/components/page-container'
@@ -199,7 +199,7 @@ export default function MyPage() {
 
 ### MDXLink Component
 
-**Reusable link component:** [mdx-link.tsx](mdx-link.tsx)
+**Reusable link component:** [mdx-link.tsx](../components/mdx-link.tsx)
 
 Automatically handles internal vs external links with consistent styling.
 
@@ -240,7 +240,7 @@ import Link from 'next/link'
 
 ### Slideshow Component
 
-**Interactive image slideshow:** [slideshow.tsx](slideshow.tsx)
+**Interactive image slideshow:** [slideshow.tsx](../components/slideshow.tsx)
 
 A client component for displaying multiple images with navigation.
 
@@ -277,7 +277,7 @@ import { Slideshow } from '@/components/slideshow'
 
 ### SortingBar Component
 
-**Content sorting interface:** [sorting-bar.tsx](sorting-bar.tsx)
+**Content sorting interface:** [sorting-bar.tsx](../components/sorting-bar.tsx)
 
 A minimal sorting component for filtering content lists (meditations, portfolio, etc.).
 
@@ -315,7 +315,7 @@ const [currentSort, setCurrentSort] = useState<SortOption>('newest')
 
 ### MeditationsList Component
 
-**Content list with sorting:** [meditations-list.tsx](meditations-list.tsx)
+**Content list with sorting:** [meditations-list.tsx](../components/meditations-list.tsx)
 
 Client component that handles display and sorting of meditation posts.
 
@@ -372,7 +372,7 @@ const hasMore = visibleCount < sortedMeditations.length
 
 #### CommentsSection Component
 
-**Main wrapper component:** [comments-section.tsx](comments-section.tsx)
+**Main wrapper component:** [comments-section.tsx](../components/comments-section.tsx)
 
 Top-level component that manages comment state and coordinates all comment UI.
 
@@ -402,7 +402,7 @@ import { CommentsSection } from '@/components/comments-section'
 
 #### CommentForm Component
 
-**Comment/reply submission form:** [comment-form.tsx](comment-form.tsx)
+**Comment/reply submission form:** [comment-form.tsx](../components/comment-form.tsx)
 
 Reusable form for both top-level comments and threaded replies.
 
@@ -453,7 +453,7 @@ import { CommentForm } from '@/components/comment-form'
 
 #### CommentItem Component
 
-**Individual comment display:** [comment-item.tsx](comment-item.tsx)
+**Individual comment display:** [comment-item.tsx](../components/comment-item.tsx)
 
 Displays a single comment with reply functionality.
 
@@ -503,7 +503,7 @@ const formattedDate = new Date(comment.created_at).toLocaleDateString('en-US', {
 
 #### CommentList Component
 
-**Threaded comment tree renderer:** [comment-list.tsx](comment-list.tsx)
+**Threaded comment tree renderer:** [comment-list.tsx](../components/comment-list.tsx)
 
 Organizes flat comment array into hierarchical thread structure.
 

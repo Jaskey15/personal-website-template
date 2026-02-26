@@ -67,17 +67,13 @@ Dual font system with modular sizing:
 
 ## Detailed Documentation
 
-Documentation is organized in a hybrid structure for easy navigation:
+All documentation lives in the `docs/` directory:
 
-**Centralized (`.claude/` folder):**
-- [.claude/README.md](.claude/README.md) - Documentation index
-- [.claude/project-overview.md](.claude/project-overview.md) - Architecture, tech stack, systems
-- [.claude/styling-guide.md](.claude/styling-guide.md) - Tailwind patterns, animations, typography
-- [.claude/content-workflow.md](.claude/content-workflow.md) - Content authoring guide
-
-**Distributed (near code):**
-- [components/README.md](components/README.md) - Component patterns and library
-- [content/README.md](content/README.md) - Content system internals
+- [docs/architecture.md](docs/architecture.md) - Architecture, tech stack, systems
+- [docs/styling.md](docs/styling.md) - Tailwind patterns, animations, typography
+- [docs/content-workflow.md](docs/content-workflow.md) - Content authoring guide
+- [docs/components.md](docs/components.md) - Component patterns and library
+- [docs/content-system.md](docs/content-system.md) - Content system internals
 
 ## Important Files
 
@@ -88,6 +84,6 @@ Documentation is organized in a hybrid structure for easy navigation:
 - [tailwind.config.ts](tailwind.config.ts) - Design tokens and configuration
 
 **Key Directories:**
-- `/components` - All React components (see [components/README.md](components/README.md))
-- `/content` - MDX content files (see [content/README.md](content/README.md))
+- `/components` - All React components (see [docs/components.md](docs/components.md))
+- `/content` - MDX content files (see [docs/content-system.md](docs/content-system.md))
 - `/app/api` - API routes for comments and contact form
