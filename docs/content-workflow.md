@@ -1,8 +1,10 @@
 # Content Workflow
 
-This guide covers how to add and manage content on the site.
+How to add and manage blog posts and portfolio projects.
 
-## Adding a New Meditation
+For the full frontmatter schema reference, see [content-system.md](content-system.md#frontmatter-schemas).
+
+## Adding a New Blog Post
 
 1. **Create the file:**
    ```bash
@@ -44,10 +46,7 @@ This guide covers how to add and manage content on the site.
 
 ## Adding a New Portfolio Project
 
-Same workflow as meditations, but:
-- Create in `content/portfolio/`
-- Use `PortfolioFrontmatter` schema
-- Include: `role`, `company`, `technologies`, `featured`
+The workflow is the same as blog posts. Create the file in `content/portfolio/` and include portfolio-specific frontmatter fields like `role`, `company`, `technologies`, and `featured`.
 
 **Example:**
 ```mdx
@@ -67,11 +66,9 @@ image: "/images/portfolio/personal-website.png"
 ...
 ```
 
-**Note:** The `image` field is optional and used for portfolio card thumbnails. If not provided, a default placeholder image is used.
+The `image` field is optional and used for portfolio card thumbnails. A default placeholder is used when omitted.
 
-## Content Best Practices
-
-### Writing Frontmatter
+## Frontmatter Best Practices
 
 **Dates:**
 - Use ISO format: `YYYY-MM-DD`
@@ -85,26 +82,23 @@ image: "/images/portfolio/personal-website.png"
 
 **Tags:**
 - Keep tags consistent across posts
-- Use lowercase, kebab-case
+- Use lowercase, kebab-case (e.g., `web-development`, `design-systems`)
 - 2-5 tags per post
-- Examples: `web-development`, `typescript`, `design-systems`
 
 **Featured (Portfolio only):**
 - Set `featured: true` for your best work
 - Featured projects can be displayed prominently
 - Use sparingly (3-5 featured projects max)
 
-**Popularity (Meditations only):**
+**Popularity (Blog posts only):**
 - Optional numeric field for manual curation
 - Higher numbers = more popular (e.g., 95, 80, 65)
-- Used by sorting feature when enabled
 - Posts without popularity default to 0
-- Use to highlight your best or most important posts
-- No strict scale - use relative values that make sense to you
+- No strict scale -- use relative values that make sense to you
 
-### Writing Content
+## Writing Content
 
-**Structure:**
+**Recommended structure:**
 ```mdx
 ## Introduction
 Brief overview
@@ -117,38 +111,20 @@ How you tackled it
 
 ## Results / Reflection
 What happened / what you learned
-
-## Conclusion
-Wrap up key takeaways
 ```
 
-**Markdown Tips:**
-- Use `##` for main sections (not `#` - that's the title)
+**Markdown tips:**
+- Use `##` for main sections (not `#` -- that's the title)
 - Break up long paragraphs (3-4 sentences max)
 - Use lists for scannability
-- Add images with alt text: `![Description](path/to/image.jpg)`
 - Link to related content: `[See my other post](/meditations/other-post)`
 
-### Images in Content
+### Images
 
-**Store in:** `/public/images/`
+Store images in `/public/images/` and reference them in MDX:
 
-**Reference in MDX:**
 ```mdx
 ![A descriptive alt text](/images/project-screenshot.png)
-```
-
-**For Next.js Image component:**
-```mdx
-import Image from 'next/image'
-
-<Image
-  src="/images/project-screenshot.png"
-  alt="Description"
-  width={800}
-  height={600}
-  className="rounded-lg"
-/>
 ```
 
 ## Troubleshooting
@@ -162,7 +138,7 @@ import Image from 'next/image'
 
 ### MDX syntax errors
 
-- Check frontmatter has opening/closing `---`
+- Check frontmatter has opening and closing `---`
 - Verify no unescaped special characters in frontmatter strings
 - Use quotes for strings with colons: `title: "Post: Subtitle"`
 

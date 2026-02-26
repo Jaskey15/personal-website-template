@@ -48,23 +48,6 @@ A clean, minimal personal website template with an interactive landing page and 
   - Meditations support optional `popularity` field for manual curation/sorting
   - Posts default to sorting by date (newest first)
 
-## Color System
-
-Uses CSS variables for theme-aware colors:
-- Light mode: Warm paper aesthetic - creamy off-white backgrounds (92% lightness), warm brown-black text, terracotta accents, subtle paper texture
-- Dark mode: Warm midnight aesthetic - rich brown-black backgrounds (11% lightness), warm cream text, glowing terracotta accents, atmospheric gradients
-- Link color: Dedicated `--color-link` variable for consistent link styling
-- Defined in `app/globals.css` using HSL values
-
-## Typography System
-
-Dual font system with modular sizing:
-- **Inter** (sans-serif): Used for body text
-  - 14px (0.875rem) for UI elements (navigation, footer, forms)
-  - 16px (1rem) for article content via `.article-content` class
-- **Crimson Text** (serif): Used for headings
-- Sizing controlled centrally in `app/globals.css` for easy maintenance
-
 ## Detailed Documentation
 
 All documentation lives in the `docs/` directory:
